@@ -1,0 +1,819 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light grey background */
+    color: #000; /* Black text */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header and navigation styles */
+
+header{
+    background-color: #ffffff; /* Light background for both */
+    padding: 10px;
+    line-height: 1.2; /* Adjusts the line height for better readability */
+    text-align: center;
+}
+
+.current-page {
+    color: #010101; /* Change the color to whatever you prefer */
+    font-weight: bold; /* Optional: makes the text bold */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Align items to start and end */
+    align-items: center; /* Center items vertically */
+    background: #dddddd;
+    padding: 10px 20px; /* Adjusted padding */
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    margin: 0 10px; /* Reduced margin for compact appearance */
+    padding: 5px 10px; /* Padding for better tap targets on mobile */
+}
+
+nav a:hover, nav a:focus {
+    color: #ecf1f3;
+    border-radius: 5px;
+    background-color: #aaa; /* Added background color on hover/focus for better visibility */
+}
+
+
+/* Media query for screens that are 768px wide or less */
+
+.title-class {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between; /* Spreads the items to opposite ends */
+    align-items: center; /* Aligns items vertically in the middle */
+}
+
+.header-logo {
+    height: 80px; /* Adjust based on your logo's size */
+    width: auto;
+    margin-right: 20px; /* Add some space between the logo and the text */
+}
+
+.man-logo {
+    height: 50px; /* Adjust based on your logo's size */
+    width: auto;
+    margin-right: 20px; /* Add some space between the logo and the text */
+}
+
+@media (max-width: 768px) {
+
+    .header-logo {
+        height:50px;
+    }
+    .man-logo {
+        height:30px;
+    }
+    .title-class{
+        max-width: 100%;
+        justify-content: none;
+    }
+}
+
+/* Responsive navbar - Hide links on small screens and show menu button */
+
+
+
+/* Section styling */
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Footer styling */
+footer {
+    background-color: #ffffff;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* This makes the container take up the full height of the viewport */
+}
+
+.text-container {
+    max-width: 700px; /* Adjust based on your preference */
+    text-align: justify; /* For text alignment within the container, can be 'justify' for justified text */
+    margin: 0 auto; /* This centers the text container within its parent */
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* Vertically center the items */
+    justify-content: flex-start;
+    padding: 20px;
+    position: relative;
+    z-index: 1; /* Ensure it appears above the background image */
+    width: 50%; /* Ensure it takes up the left half of the page */
+}
+
+.content-container-right {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* Vertically center the items */
+    justify-content: flex-end;
+    padding: 10px;
+    position: relative;
+    z-index: 0; 
+    width: 97%;
+}
+
+.profile-image {
+    max-width: 30%;
+    height: auto;
+    border-radius: 10px; /* Rounds the corners of the image */
+    margin-right: 20px;
+}
+
+.text-beside-image {
+    background-color: white;
+    max-height: 50%;
+    max-width: 90%;
+    line-height: 1.5;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.research-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* Vertically center the items */
+    padding: 20px;
+    position: relative;
+    z-index: 1; /* Ensure it appears above the background image */
+}
+
+.shift-right {
+    justify-content: flex-end;
+}
+
+.research-text {
+    background-color: white;
+    max-width: 45%;
+    max-height: 100%;
+    line-height: 1.5;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+    .profile-image,
+    .text-beside-image {
+        max-width: 50%;
+        margin: 10px 0;
+    }
+}
+
+
+.contact-links {
+    text-align: center;
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.contact-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #030e8a; /* Adjust color as needed */
+    text-decoration: none; /* Removes underline from links */
+}
+
+.contact-links i {
+    margin-right: 5px; /* Adds a small space between the icon and text */
+}
+
+
+.member-info {
+    display: none; /* Initially hidden */
+}
+
+.team-member {
+    text-align: center;
+    margin: 40px;
+}
+
+.team-members-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* This will evenly space the items and handle alignment nicely */
+    align-items: start; /* Align items at the start of the container */
+    max-width: 900px; /* Adjust based on your design preference */
+    margin: auto; /* This centers the container if it's not as wide as the viewport */
+}
+
+.team-member {
+    width: calc(25% - 20px); /* This assumes 20px is the total of the left and right margins */
+    margin: 10px; /* Provides spacing between items */
+    box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+    .team-member {
+        width: calc(50% - 20px); /* 2-column layout for smaller screens */
+    }
+}
+
+@media (max-width: 500px) {
+    .team-member {
+        width: 100%; /* 1-column layout for very small screens */
+    }
+}
+
+
+
+
+
+
+.member-name {
+    font-weight: bold;
+}
+
+
+
+
+.team-member img:hover {
+    transform: scale(1.1); /* Skews the image on hover */
+}
+
+
+.team-member {
+    position: relative; /* Makes .team-member a reference for absolutely positioned .member-info */
+    width: calc(25% - 20px); /* Or whatever your width is */
+    margin: 10px; /* Or your defined margin */
+    box-sizing: border-box;
+    cursor: pointer; /* Optional: Changes the cursor to indicate the item is interactive */
+}
+
+.team-member img {
+    width: 100%; /* Ensures the image covers the .team-member area */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5%; /* Keeps your rounded corners */
+    transition: opacity 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.member-info {
+    position: absolute; /* Positions .member-info over the .team-member */
+    top: 0;
+    left: 0;
+    width: 100%; /* Covers the whole .team-member area */
+    height: 100%; /* Covers the whole .team-member area */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: white; /* Adjust text color as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for the hover effect */
+    border-radius: 5%; /* Matches the img border-radius */
+    padding: 10px; /* Adjust padding as needed */
+    box-sizing: border-box;
+}
+
+.team-member:hover .member-info {
+    opacity: 1; /* Shows the .member-info on hover */
+}
+
+
+
+.team-member:hover img {
+    opacity: 0.3; /* Optional: Dim the image when hovering over the team member */
+}
+
+h2{text-align: center;}
+  
+#publications-container {
+display: flex;
+flex-direction: column;
+align-items: center; /* Centers the items horizontally in the container */
+justify-content: center;
+width: 100%;
+}
+
+.publication {
+background-color: rgb(254, 254, 254);
+opacity: 0.95 ;
+margin-bottom: 20px;
+padding: 15px;
+border-radius: 10px; /* Adjust for more pronounced rounded corners if desired */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for depth */
+width: 90%; /* Adjust the width of the boxes */
+max-width: 600px; /* Prevents the boxes from becoming too wide on large screens */
+}
+
+.publication-title {
+font-weight: bold;
+margin-bottom: 10px; /* Adjust the size of the gap as needed */
+text-align: center; /* Centers the title text */
+}
+
+.publication-title a {
+text-decoration: none;
+color: black; /* Ensures the link color is black, adjust as needed */
+}
+
+
+.publication-name {
+    font-style: italic;
+    font-weight: bold;
+    text-align: center; /* Centers the authors text */
+    }
+
+.publication-authors {
+font-style: italic;
+text-align: center; /* Centers the authors text */
+}
+
+
+
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    position: absolute;
+    border-radius: 5px;
+    align-content: center;
+}
+
+
+
+
+.research-areas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.resources-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0px;
+}
+
+.research-area {
+    text-align: center;
+    padding: 15px;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Set a fixed width for each research area */
+    height: 400px;
+    margin: 40px;
+    background-color: #f0f0f0;
+}
+
+
+.resource-area {
+    text-align: center;
+    padding: 15px;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Set a fixed width for each research area */
+    height: auto;
+    margin: 40px;
+    background-color: #f0f0f0;
+}
+
+.resource-image {
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.research-image {
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+
+
+.publication-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.research-title {
+    text-align: bottom;
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+.rotate-image {
+    transform: rotate(90deg); /* Rotate the image 90 degrees */
+}
+
+.ruthenium-catalysis-page {
+    background-image: url("images/Landscape_compressed_cropped.png");
+    position: relative; /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 2; /* Adjust the opacity to make the image faded */
+    z-index: -1;
+
+}
+
+.pub-background {
+    background-image: url("images/manchester_photo.jpg");
+    position: relative; /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 2; /* Adjust the opacity to make the image faded */
+    z-index: -1;
+
+
+}
+
+.sun-back {
+    background-image: url("images/sun_set.jpg");
+    position: relative; /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 2; /* Adjust the opacity to make the image faded */
+    z-index: -1;
+
+}
+
+
+.resource-page {
+    background-image: url("images/chem_textbook.jpg");
+    position: relative; /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 2; /* Adjust the opacity to make the image faded */
+    z-index: -1;
+
+}
+
+.bio-page {
+    background-image: url("images/6Y3C\ \(1\).png");
+    position: relative; /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 2; /* Adjust the opacity to make the image faded */
+    z-index: -1;
+
+}
+
+
+.CHActivation {
+    background-image: url("images/depressing_fume_hood_trimed.jpg");
+    position: relative; /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 2; /* Adjust the opacity to make the image faded */
+    z-index: -1;
+
+}
+
+
+.DeCarbox-background {
+    background-image: url("images/fizy_water.webp");
+    position: relative; /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 2; /* Adjust the opacity to make the image faded */
+    z-index: -1;
+
+}
+
+
+.AI-page {
+    background-image: url("images/AI_Back_Ground.webp"); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 2; /* Adjust the opacity to make the image faded */
+
+}
+
+.cover-page {
+    background-image: url("images/retreat2021.jpeg"); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 2; /* Adjust the opacity to make the image faded */
+
+}
+
+
+.about-igor {
+    position: relative;
+    min-height: 100vh; /* Ensure it takes the full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    opacity: 2;
+}
+
+.about-igor::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/igor_chatting_alex.jpg");
+    background-size: 50%;
+    background-position: right;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.resource-links {
+    max-width: 800px; /* Adjust based on your layout */
+    margin: auto; /* Center align the container */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light grey background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.resource-links h2 {
+    text-align: center; /* Center the heading */
+    color: #333; /* Dark grey for text */
+}
+
+.resource-links ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+}
+
+.resource-links li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+.resource-links a {
+    color: #007bff; /* Bootstrap-like link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.2s; /* Smooth color transition on hover */
+}
+
+.resource-links a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+.group-image-container {
+    width: 100%;
+    overflow: hidden; /* Ensures no overflow during animation */
+}
+
+.fade-in-image {
+    width: 70%;
+    opacity: 0; /* Start fully transparent */
+    animation: fadeInAnimation ease 2s; /* Adjust time as needed */
+    animation-fill-mode: forwards; /* Keeps the image visible after animation */
+}
+
+
+.fade-in-background {
+    width: 100%;
+    opacity: 0; /* Start fully transparent */
+    animation: fadeInAnimation ease 1.5s; /* Adjust time as needed */
+    animation-fill-mode: forwards; /* Keeps the image visible after animation */
+    z-index: -1;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style for the dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #dddddd;
+    top: 100%; /* This aligns the top of the dropdown with the bottom of the navbar */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transform: translateY(0px);
+    transition: all 1s ease;
+}
+
+
+/* Style for the links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+
+.research-text {
+    background-color: white;
+    max-width: 45%;
+    max-height: 10%;
+    line-height: 1.5;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#reset-this {
+    all: initial;
+}
+.youtube-box{
+    min-height: 100%;
+    min-width: 100%;
+    text-align: center;
+}
+
+
+.slideshow-container {
+    width: 30%;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    height: 5%;
+    max-width: 100%;
+    width: auto;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    from {opacity: 0.1} 
+    to {opacity: 1}
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%; /* Full width */
+    }
+
+    .nav-links a {
+        text-align: center;
+        padding: 10px;
+        margin: 5px 0; /* Adjust spacing */
+    }
+
+    .menu-toggle {
+        display: block;
+        color: #000000;
+        cursor: pointer;
+    }
+
+    .dropdown {
+        position: relative;
+        text-align: center;
+        align-items: center;
+    }
+    .dropdown-content{
+        position: relative;
+        align-content: center;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+        opacity: 1;
+        position: relative;
+        border-radius: 5px;
+        align-content: center;
+    }
+    .content-container-right{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        max-width: 90%;
+        opacity: 0.8;
+    }
+    .research-text{
+        max-width: 90%;
+        height: auto;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .about-igor {
+        background-image: url("images/igor_chatting_alex.jpg");
+        background-size: cover;
+        width: 100%;
+        background-position: center;
+        background-attachment: fixed;
+        opacity: 0.5; /* Adjust the opacity to make the image faded */
+        z-index: -1;
+        min-height: 100%;
+    }
+    .about-igor::before{
+        all: initial;
+    }
+    .text-beside-image{
+        max-width: 100%;
+        position: relative;
+        align-items: center;
+    }
+    .content-container{
+        max-width: 100%;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        opacity: 0.8;
+    }
+
+    
+
+}
+
+
+@media (max-width: 768px) {
+    .team-members-container {
+        display: flex;
+        flex-direction: column; /* Arrange items in a column */
+        align-items: center; /* Center align items horizontally */
+        margin: auto; /* Center the container */
+    }
+    .team-member {
+        text-align: center;
+        width: 90%;
+        height: auto;
+    }
+    .group-image-container {
+        display: flex;
+        overflow: hidden; /* Ensures no overflow during animation */
+    }
+
+    .cover-page {
+        src: url("images/retreat2021.jpeg"); /* Replace with your background image path */
+    
+    }
+    .slideshow-container{
+        max-width: 100%;
+        width: 100%;
+    }
+
+
+
+
+}
+
+
+
